@@ -10,13 +10,12 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  padding: 0.5rem 1rem;
+  padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   border: 2px solid var(--color-secondary);
   background: var(--color-primary);
   color: var(--color-text);
   font-weight: bold;
-  font-size: 1rem;
   line-height: 1;
   text-decoration: none;
   cursor: pointer;

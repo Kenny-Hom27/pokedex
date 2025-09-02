@@ -1,6 +1,6 @@
 .card {
   width: 320px;
-  margin: 2rem auto;
+  margin: var(--spacing-lg) auto;
   padding: var(--spacing-md);
   background: #fefefe;
   border: 8px solid var(--color-primary);
@@ -43,7 +43,7 @@
   height: auto;
 }
 
-/* Type badge */
+/* Types */
 .types {
   display: flex;
   justify-content: center;
@@ -54,12 +54,12 @@
 .type {
   background: var(--color-secondary);
   color: var(--color-white);
-  padding: 0.25rem 0.5rem;
+  padding: var(--spacing-xs) var(--spacing-sm);
   border-radius: var(--radius-sm);
   text-transform: capitalize;
 }
 
-/* Stats box */
+/* Stats */
 .stats {
   border-top: 2px solid #ddd;
   padding-top: var(--spacing-sm);
@@ -74,7 +74,7 @@
 .stats li {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 0.25rem;
+  margin-bottom: var(--spacing-xs);
 }
 
 .statsName {
@@ -85,18 +85,15 @@
 .attackButton {
   display: inline-block;
   width: 160px;
-  padding: 0.75rem 1rem;
-
+  padding: var(--spacing-md);
   background: #fefefe;
   border: 3px solid #333;
   border-radius: 8px;
-
   font-family: var(--font-pokemon, "Press Start 2P", monospace);
   font-size: var(--font-size-small);
   text-transform: uppercase;
   text-align: center;
   color: #111;
-
   cursor: pointer;
   transition: transform 0.1s ease, background 0.1s ease;
 }
