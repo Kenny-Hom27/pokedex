@@ -1,5 +1,5 @@
 .card {
-  width: 320px;
+  width: 360px;
   margin: var(--spacing-lg) auto;
   padding: var(--spacing-md);
   background: #fefefe;
@@ -30,7 +30,7 @@
 
 /* Image window */
 .imageWrapper {
-  background: var(--color-white);
+  background: var(--color-bg);
   border: 2px solid var(--color--text);
   border-radius: var(--radius-sm);
   padding: var(--spacing-sm);

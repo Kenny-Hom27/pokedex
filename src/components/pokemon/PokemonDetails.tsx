@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
 import type { Pokemon } from "../../types/pokemon";
 import styles from "./PokemonDetails.module.css";
-import { POKEMON_ATTACK } from "../../constants";
+import { ARIA_STATS, POKEMON_ATTACK } from "../../constants";
 
 interface PokemonDetailProps {
   pokemon: Pokemon;
@@ -20,11 +20,20 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
   };
 
   return (
-    <div className={styles.card}>
-      <div className={styles.header}>
-        <span className={styles.name}>{pokemon.name}</span>
-        <span className={styles.hp}>HP {pokemon.stats[0]?.base_stat}</span>
-      </div>
+    <div
+      className={styles.card}
+      role="region"
+      aria-label={`${pokemon.name} details`}
+    >
+      <header className={styles.header}>
+        <h2 className={styles.name}>{pokemon.name}</h2>
+        <span
+          className={styles.hp}
+          aria-label={`HP ${pokemon.stats[0]?.base_stat}`}
+        >
+          HP {pokemon.stats[0]?.base_stat}
+        </span>
+      </header>
 
       <div
         className={styles.imageWrapper}
@@ -37,7 +46,7 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
               ? pokemon.sprites.back_default
               : pokemon.sprites.front_default
           }
-          alt={pokemon.name}
+          alt={`${pokemon.name} sprite`}
           className={styles.image}
         />
       </div>
@@ -50,20 +59,26 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
         ))}
       </div>
 
-      <div className={styles.stats}>
+      <section className={styles.stats} aria-label={ARIA_STATS}>
         <ul>
           {pokemon.stats.map((s) => (
             <li key={s.stat.name}>
               <span className={styles.statsName}>{s.stat.name}</span>
-              <span>{s.base_stat}</span>
+              <span aria-label={`${s.stat.name} ${s.base_stat}`}>
+                {s.base_stat}
+              </span>
             </li>
           ))}
         </ul>
-      </div>
+      </section>
 
       <div>
         <audio ref={audioRef} src={pokemon.cries.latest} preload="auto" />
-        <button onClick={handlePlay} className={styles.attackButton}>
+        <button
+          onClick={handlePlay}
+          className={styles.attackButton}
+          aria-label={`${pokemon.name}'s cry`}
+        >
           {POKEMON_ATTACK}
         </button>
       </div>

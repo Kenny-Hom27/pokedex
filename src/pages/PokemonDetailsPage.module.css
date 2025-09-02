@@ -7,25 +7,30 @@
 }
 
 .navButton {
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
   padding: var(--spacing-sm) var(--spacing-md);
   border-radius: var(--radius-md);
   border: 2px solid var(--color-secondary);
   background: var(--color-primary);
   color: var(--color-text);
   font-weight: bold;
+  font-size: var(--font-size-lg);
+  font-family: var(--font-secondary);
   line-height: 1;
   text-decoration: none;
   cursor: pointer;
   transition: background 0.2s ease, color 0.2s ease;
-  min-width: 100px;
   text-align: center;
-  appearance: none;
 }
 
 .navButton:hover {
   background: var(--color-secondary);
   color: var(--color-white);
+}
+
+.flexStart {
+  justify-content: flex-start;
+}
+
+.flexEnd {
+  justify-content: flex-end;
 }

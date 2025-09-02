@@ -6,6 +6,9 @@ import styles from "./PokemonDetailsPage.module.css";
 import PokemonDetails from "../components/pokemon/PokemonDetails";
 import Button from "../components/common/Button";
 import {
+  ARIA_BACK_TO_POKEDEX,
+  ARIA_POKEMON_GOTO,
+  ARIA_POKEMON_NAV,
   LOADING,
   NO_POKEMON_FOUND,
   POKEDEX_BACK,
@@ -24,7 +27,7 @@ export default function PokemonDetailPage() {
 
   const currentId = Number(id);
   const prevId = currentId > 1 ? currentId - 1 : null;
-  const nextId = currentId < 151 ? currentId + 1 : null;
+  const nextId = currentId + 1;
 
   useEffect(() => {
     if (!id) return;
@@ -44,27 +47,45 @@ export default function PokemonDetailPage() {
   if (!pokemon) return <p>{NO_POKEMON_FOUND}</p>;
 
   return (
-    <div>
-      <Link to="/" className={styles.navButton}>
-        {POKEDEX_BACK}
-      </Link>
-      <PokemonDetails pokemon={pokemon} />
-      <div className={styles.buttonRow}>
+    <main>
+      <nav aria-label={ARIA_BACK_TO_POKEDEX}>
+        <Link
+          to="/"
+          className={styles.navButton}
+          aria-label={ARIA_BACK_TO_POKEDEX}
+        >
+          {POKEDEX_BACK}
+        </Link>
+      </nav>
+
+      <article aria-label={`Details for ${pokemon.name}`}>
+        <PokemonDetails pokemon={pokemon} />
+      </article>
+
+      <nav
+        className={`${styles.buttonRow} ${!prevId ? styles.flexEnd : ""} ${
+          !nextId ? styles.flexStart : ""
+        }`}
+        aria-label={ARIA_POKEMON_NAV}
+      >
         {prevId && (
           <Button
             handleClick={() => navigate(`/pokemon/${prevId}`)}
             className={styles.navButton}
             text={POKEMON_PREVIOUS}
+            ariaLabel={`${ARIA_POKEMON_GOTO} ${prevId}`}
           />
         )}
+
         {nextId && (
           <Button
             handleClick={() => navigate(`/pokemon/${nextId}`)}
             className={styles.navButton}
             text={POKEMON_NEXT}
+            ariaLabel={`${ARIA_POKEMON_GOTO} ${nextId}`}
           />
         )}
-      </div>
-    </div>
+      </nav>
+    </main>
   );
 }

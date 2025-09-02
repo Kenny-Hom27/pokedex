@@ -6,6 +6,8 @@ import { Link } from "react-router-dom";
 import styles from "./PokemonListPage.module.css";
 import Button from "../components/common/Button";
 import {
+  ARIA_LOAD_MORE_POKEMON,
+  ARIA_VIEW_DETAILS,
   LOADING,
   OFFSET,
   POKEMON_HEADER,
@@ -43,26 +45,38 @@ export default function PokemonListPage() {
   };
 
   return (
-    <div>
+    <main>
       <h1 className={styles.header}>{POKEMON_HEADER}</h1>
-      <div className={styles.grid}>
+
+      <ul className={styles.grid} role="list">
         {pokemon.map((p, idx) => {
           const id = idx + 1;
           return (
-            <Link key={p.name} to={`/pokemon/${id}`}>
-              <PokemonCard id={id} name={p.name} />
-            </Link>
+            <li key={p.name}>
+              <Link
+                to={`/pokemon/${id}`}
+                className={styles.cardLink}
+                aria-label={`${ARIA_VIEW_DETAILS} ${p.name}`}
+              >
+                <PokemonCard id={id} name={p.name} />
+              </Link>
+            </li>
           );
         })}
-      </div>
+      </ul>
 
-      <div className={styles.loadMoreWrapper}>
+      <nav
+        className={styles.loadMoreWrapper}
+        aria-label={ARIA_LOAD_MORE_POKEMON}
+      >
         <Button
           className={styles.loadMoreButton}
           handleClick={handleShowMore}
           text={loading ? LOADING : SHOW_MORE}
+          ariaLabel={ARIA_LOAD_MORE_POKEMON}
+          disabled={loading}
         />
-      </div>
-    </div>
+      </nav>
+    </main>
   );
 }
