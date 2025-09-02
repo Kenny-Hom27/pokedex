@@ -1,0 +1,29 @@
+.header {
+  color: var(--color-secondary);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.loadMoreWrapper {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.loadMoreButton {
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-secondary);
+  background: var(--color-primary);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.loadMoreButton:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}

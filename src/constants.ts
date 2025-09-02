@@ -1,0 +1,10 @@
+export const OFFSET = 20;
+export const POKEMON_HEADER = "Pokédex";
+export const POKEMON_LOADING_ERROR = "Error loading Pokémon:";
+export const LOADING = "Loading...";
+export const SHOW_MORE = "Show More";
+export const NO_POKEMON_FOUND = "No Pokemon Found";
+export const POKEDEX_BACK = "⬅ Back to Pokedex";
+export const POKEMON_NEXT = "Next ➡";
+export const POKEMON_PREVIOUS = "⬅ Previous";
+export const POKEMON_ATTACK = "Attack";

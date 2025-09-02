@@ -1,0 +1,32 @@
+.buttonRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-md);
+  gap: var(--spacing-sm);
+}
+
+.navButton {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-md);
+  border: 2px solid var(--color-secondary);
+  background: var(--color-primary);
+  color: var(--color-text);
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+  min-width: 100px;
+  text-align: center;
+  appearance: none;
+}
+
+.navButton:hover {
+  background: var(--color-secondary);
+  color: var(--color-white);
+}
