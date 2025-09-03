@@ -1,28 +1,28 @@
 # Pokedex
 
-A simple Pokédex web app built with React + Vite + TypeScript, styled with CSS Modules, and powered by the PokéAPI.
+`A simple Pokédex web app built with React + Vite + TypeScript, styled with CSS Modules, and powered by the PokéAPI.`
 
-Browse Pokémon, filter by name, and view individual Pokémon details in a card-style layout inspired by the trading cards and video games.
+`Browse Pokémon, filter by name, and view individual Pokémon details in a card-style layout inspired by the trading cards and video games.`
 
 ## How to start the project
 
 ### Clone repo
 
-git clone https://github.com/your-username/pokedex.git
+`git clone https://github.com/your-username/pokedex.git`
 
-cd pokedex
+`cd pokedex`
 
 ### Install packages
 
-npm install
+`npm install`
 
 ### Run dev
 
-npm run dev
+`npm run dev`
 
 ### Running tests
 
-npm run test
+`npm run test`
 
 ## Project Structure
 
@@ -44,8 +44,8 @@ src/
 
 ### List of Pokemon
 
-https://pokeapi.co/api/v2/pokemon?offset=0&limit=20
+`https://pokeapi.co/api/v2/pokemon?offset=0&limit=20`
 
 ### Individual Pokemon
 
-https://pokeapi.co/api/v2/pokemon/{id}
+`https://pokeapi.co/api/v2/pokemon/{id}`
