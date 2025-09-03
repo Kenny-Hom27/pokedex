@@ -8,6 +8,7 @@ export const POKEDEX_BACK = "⬅ Back to Pokédex";
 export const POKEMON_NEXT = "Next ➡";
 export const POKEMON_PREVIOUS = "⬅ Previous";
 export const POKEMON_ATTACK = "Attack";
+export const SEARCH_POKEMON = "Search Pokémon Name:";
 
 export const ARIA_LOAD_MORE_POKEMON = "Load more Pokémon";
 export const ARIA_VIEW_DETAILS = "View details for";
