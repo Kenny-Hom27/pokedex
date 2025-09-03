@@ -16,7 +16,7 @@
 
   --font-primary: "Press Start 2P", cursive;
   --font-secondary: "Inter", system-ui, sans-serif;
-  --font-size-small: 12px;
+  --font-size-sm: 12px;
   --font-size-base: 16px;
   --font-size-lg: 20px;
 
@@ -62,6 +62,10 @@ p {
 
 a {
   text-decoration: none;
+}
+
+a:visited {
+  color: inherit;
 }
 
 ul {

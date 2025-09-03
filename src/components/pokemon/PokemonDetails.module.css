@@ -90,7 +90,7 @@
   border: 3px solid #333;
   border-radius: 8px;
   font-family: var(--font-pokemon, "Press Start 2P", monospace);
-  font-size: var(--font-size-small);
+  font-size: var(--font-size-sm);
   text-transform: uppercase;
   text-align: center;
   color: #111;

@@ -58,9 +58,7 @@ export default function PokemonDetailPage() {
         </Link>
       </nav>
 
-      <article aria-label={`Details for ${pokemon.name}`}>
-        <PokemonDetails pokemon={pokemon} />
-      </article>
+      <PokemonDetails pokemon={pokemon} />
 
       <nav
         className={`${styles.buttonRow} ${!prevId ? styles.flexEnd : ""} ${

@@ -1,5 +1,5 @@
 export const OFFSET = 20;
-export const POKEMON_HEADER = "Pokédex";
+export const POKEMON_HEADER = "Pokémon List";
 export const POKEMON_LOADING_ERROR = "Error loading Pokémon:";
 export const LOADING = "Loading...";
 export const SHOW_MORE = "Show More";

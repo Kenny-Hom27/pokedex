@@ -46,7 +46,7 @@ export default function PokemonListPage() {
 
   return (
     <main>
-      <h1 className={styles.header}>{POKEMON_HEADER}</h1>
+      <h2 className={styles.header}>{POKEMON_HEADER}</h2>
 
       <ul className={styles.grid} role="list">
         {pokemon.map((p, idx) => {
