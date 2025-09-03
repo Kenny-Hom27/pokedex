@@ -4,6 +4,7 @@
   align-items: center;
   margin-top: var(--spacing-md);
   gap: var(--spacing-sm);
+  padding: 0 var(--spacing-sm);
 }
 
 .navButton {
@@ -25,10 +26,6 @@
 .navButton:hover {
   background: var(--color-secondary);
   color: var(--color-white);
-}
-
-.flexStart {
-  justify-content: flex-start;
 }
 
 .flexEnd {

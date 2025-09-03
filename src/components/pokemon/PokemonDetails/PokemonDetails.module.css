@@ -1,5 +1,6 @@
 .card {
-  width: 360px;
+  width: 350px;
+  min-height: 700px;
   margin: var(--spacing-lg) auto;
   padding: var(--spacing-md);
   background: #fefefe;

@@ -9,7 +9,6 @@ import {
   ARIA_BACK_TO_POKEDEX,
   ARIA_POKEMON_GOTO,
   ARIA_POKEMON_NAV,
-  LOADING,
   NO_POKEMON_FOUND,
   POKEDEX_BACK,
   POKEMON_LOADING_ERROR,
@@ -20,7 +19,6 @@ import {
 export default function PokemonDetailPage() {
   const { id } = useParams<{ id: string }>();
   const [pokemon, setPokemon] = useState<Pokemon | null>(null);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const navigate = useNavigate();
@@ -32,17 +30,14 @@ export default function PokemonDetailPage() {
   useEffect(() => {
     if (!id) return;
 
-    setLoading(true);
     fetchPokemonById(id)
       .then((data) => {
         setPokemon(data);
         setError(null);
       })
-      .catch(() => setError(POKEMON_LOADING_ERROR))
-      .finally(() => setLoading(false));
+      .catch(() => setError(POKEMON_LOADING_ERROR));
   }, [id]);
 
-  if (loading) return <p>{LOADING}</p>;
   if (error) return <p>{error}</p>;
   if (!pokemon) return <p>{NO_POKEMON_FOUND}</p>;
 
@@ -75,14 +70,12 @@ export default function PokemonDetailPage() {
           />
         )}
 
-        {nextId && (
-          <Button
-            handleClick={() => navigate(`/pokemon/${nextId}`)}
-            className={styles.navButton}
-            text={POKEMON_NEXT}
-            ariaLabel={`${ARIA_POKEMON_GOTO} ${nextId}`}
-          />
-        )}
+        <Button
+          handleClick={() => navigate(`/pokemon/${nextId}`)}
+          className={styles.navButton}
+          text={POKEMON_NEXT}
+          ariaLabel={`${ARIA_POKEMON_GOTO} ${nextId}`}
+        />
       </nav>
     </main>
   );
