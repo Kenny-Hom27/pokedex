@@ -4,6 +4,9 @@ A simple Pokédex web app built with React + Vite + TypeScript, styled with CSS 
 
 Browse Pokémon, filter by name, and view individual Pokémon details in a card-style layout inspired by the trading cards and video games.
 
+
+<img src="./public/pokemon-list-ss.png" alt="Pokemon List Screenshot" width="400" height="250" />
+
 ## How to start the project
 
 ### Clone repo
@@ -49,3 +52,5 @@ src/
 ### Individual Pokemon
 
 `https://pokeapi.co/api/v2/pokemon/{id}`
+
+<img src="./public/mewtwo-ss.png" alt="Mewtwo Screenshot" width="250" height="400" />
