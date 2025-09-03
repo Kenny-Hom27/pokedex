@@ -2,6 +2,7 @@ import { useState, useRef } from "react";
 import type { Pokemon } from "../../../types/pokemon";
 import styles from "./PokemonDetails.module.css";
 import { ARIA_STATS, POKEMON_ATTACK } from "../../../constants";
+import Button from "../../common/Button";
 
 interface PokemonDetailProps {
   pokemon: Pokemon;
@@ -20,12 +21,8 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
   };
 
   return (
-    <div
-      className={styles.card}
-      role="region"
-      aria-label={`${pokemon.name} details`}
-    >
-      <header className={styles.header}>
+    <article className={styles.card} aria-label={`${pokemon.name} details`}>
+      <section className={styles.header}>
         <h2 className={styles.name}>{pokemon.name}</h2>
         <span
           className={styles.hp}
@@ -33,7 +30,7 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
         >
           HP {pokemon.stats[0]?.base_stat}
         </span>
-      </header>
+      </section>
 
       <div
         className={styles.imageWrapper}
@@ -51,13 +48,13 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
         />
       </div>
 
-      <div className={styles.types}>
+      <section className={styles.types}>
         {pokemon.types.map((t) => (
           <span key={t.slot} className={styles.type}>
             {t.type.name}
           </span>
         ))}
-      </div>
+      </section>
 
       <section className={styles.stats} aria-label={ARIA_STATS}>
         <ul>
@@ -72,16 +69,15 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
         </ul>
       </section>
 
-      <div>
+      <section>
         <audio ref={audioRef} src={pokemon.cries.latest} preload="auto" />
-        <button
-          onClick={handlePlay}
+        <Button
+          handleClick={handlePlay}
           className={styles.attackButton}
           aria-label={`${pokemon.name}'s cry`}
-        >
-          {POKEMON_ATTACK}
-        </button>
-      </div>
-    </div>
+          text={POKEMON_ATTACK}
+        />
+      </section>
+    </article>
   );
 }

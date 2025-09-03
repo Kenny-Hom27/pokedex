@@ -13,6 +13,13 @@
   --color-bg: #f2f2f2;
   --color-text: #2a2a2a;
   --color-white: #ffffff;
+  --color-off-white: #fefefe;
+  --color-black: #000000;
+  --color-grey: #dddddd;
+  --color-input-border: #cccccc;
+  --color-input-placeholder: #aaaaaa;
+  --color-button-hover: #ffcc00;
+  --color-button-active: #ff9900;
 
   --font-primary: "Press Start 2P", cursive;
   --font-secondary: "Inter", system-ui, sans-serif;

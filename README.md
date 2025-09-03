@@ -8,7 +8,7 @@ Browse Pokémon, filter by name, and view individual Pokémon details in a card-
 
 ### Clone repo
 
-`git clone https://github.com/your-username/pokedex.git`
+`git clone https://github.com/Kenny-Hom27/pokedex.git`
 
 `cd pokedex`
 

@@ -3,7 +3,7 @@
   min-height: 700px;
   margin: var(--spacing-lg) auto;
   padding: var(--spacing-md);
-  background: #fefefe;
+  background: var(--color-off-white);
   border: 8px solid var(--color-primary);
   border-radius: var(--radius-lg);
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
@@ -62,7 +62,7 @@
 
 /* Stats */
 .stats {
-  border-top: 2px solid #ddd;
+  border-top: 2px solid var(--color-grey);
   padding-top: var(--spacing-sm);
 }
 
@@ -87,23 +87,23 @@
   display: inline-block;
   width: 160px;
   padding: var(--spacing-md);
-  background: #fefefe;
-  border: 3px solid #333;
+  background: var(--color-grey);
+  border: 3px solid var(--color-grey);
   border-radius: 8px;
-  font-family: var(--font-pokemon, "Press Start 2P", monospace);
+  font-family: var(--font-primary);
   font-size: var(--font-size-sm);
   text-transform: uppercase;
   text-align: center;
-  color: #111;
+  color: var(--color-black);
   cursor: pointer;
   transition: transform 0.1s ease, background 0.1s ease;
 }
 
 .attackButton:hover {
-  background: #ffcc00; /* highlight like menu selection */
+  background: var(--color-button-hover); /* highlight like menu selection */
 }
 
 .attackButton:active {
   transform: scale(0.95);
-  background: #ff9900;
+  background: var(--color-button-active);
 }
