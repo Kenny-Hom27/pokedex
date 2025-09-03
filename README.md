@@ -23,8 +23,9 @@ npm run dev
 
 npm run test
 
-## Folder structure
+## Project Structure
 
+```
 src/
   components/         # Reusable components (cards, buttons, header, footer)
     common/           # Shared UI like Button
@@ -35,6 +36,7 @@ src/
   types/              # TypeScript types
   constants/          # App constants and ARIA strings
   App.tsx             # Main app with routing
+```
 
 
 ## API Usage
