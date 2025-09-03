@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { fetchPokemonList } from "../utils/api";
-import type { PokemonListResult } from "../types/pokemon";
-import PokemonCard from "../components/pokemon/PokemonCard";
+import { fetchPokemonList } from "../../utils/api";
+import type { PokemonListResult } from "../../types/pokemon";
+import PokemonCard from "../../components/pokemon/PokemonCard/PokemonCard";
 import { Link } from "react-router-dom";
 import styles from "./PokemonListPage.module.css";
-import Button from "../components/common/Button";
+import Button from "../../components/common/Button";
 import {
   ARIA_LOAD_MORE_POKEMON,
   ARIA_VIEW_DETAILS,
@@ -13,7 +13,7 @@ import {
   POKEMON_HEADER,
   POKEMON_LOADING_ERROR,
   SHOW_MORE,
-} from "../constants";
+} from "../../constants";
 
 export default function PokemonListPage() {
   const [pokemon, setPokemon] = useState<PokemonListResult[]>([]);

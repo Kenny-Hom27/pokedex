@@ -1,7 +1,7 @@
 import { useState, useRef } from "react";
-import type { Pokemon } from "../../types/pokemon";
+import type { Pokemon } from "../../../types/pokemon";
 import styles from "./PokemonDetails.module.css";
-import { ARIA_STATS, POKEMON_ATTACK } from "../../constants";
+import { ARIA_STATS, POKEMON_ATTACK } from "../../../constants";
 
 interface PokemonDetailProps {
   pokemon: Pokemon;

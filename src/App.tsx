@@ -1,8 +1,8 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Header from "./components/layout/Header";
-import Footer from "./components/layout/Footer";
-import PokemonListPage from "./pages/PokemonListPage";
-import PokemonDetailsPage from "./pages/PokemonDetailsPage";
+import Header from "./components/layout/Header/Header";
+import Footer from "./components/layout/Footer/Footer";
+import PokemonListPage from "./pages/PokemonListPage/PokemonListPage";
+import PokemonDetailsPage from "./pages/PokemonDetailsPage/PokemonDetailsPage";
 
 function App() {
   return (

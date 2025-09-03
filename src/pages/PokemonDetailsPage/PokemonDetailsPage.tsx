@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import { Link, useNavigate, useParams } from "react-router-dom";
-import { fetchPokemonById } from "../utils/api";
-import type { Pokemon } from "../types/pokemon";
+import { fetchPokemonById } from "../../utils/api";
+import type { Pokemon } from "../../types/pokemon";
 import styles from "./PokemonDetailsPage.module.css";
-import PokemonDetails from "../components/pokemon/PokemonDetails";
-import Button from "../components/common/Button";
+import PokemonDetails from "../../components/pokemon/PokemonDetails/PokemonDetails";
+import Button from "../../components/common/Button";
 import {
   ARIA_BACK_TO_POKEDEX,
   ARIA_POKEMON_GOTO,
@@ -15,7 +15,7 @@ import {
   POKEMON_LOADING_ERROR,
   POKEMON_NEXT,
   POKEMON_PREVIOUS,
-} from "../constants";
+} from "../../constants";
 
 export default function PokemonDetailPage() {
   const { id } = useParams<{ id: string }>();
