@@ -1,8 +1,8 @@
 # Pokedex
 
-`A simple Pokédex web app built with React + Vite + TypeScript, styled with CSS Modules, and powered by the PokéAPI.`
+A simple Pokédex web app built with React + Vite + TypeScript, styled with CSS Modules, and powered by the PokéAPI.
 
-`Browse Pokémon, filter by name, and view individual Pokémon details in a card-style layout inspired by the trading cards and video games.`
+Browse Pokémon, filter by name, and view individual Pokémon details in a card-style layout inspired by the trading cards and video games.
 
 ## How to start the project
 
