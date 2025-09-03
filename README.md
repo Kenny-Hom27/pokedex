@@ -9,6 +9,7 @@ Browse Pokémon, filter by name, and view individual Pokémon details in a card-
 ### Clone repo
 
 git clone https://github.com/your-username/pokedex.git
+
 cd pokedex
 
 ### Install packages
