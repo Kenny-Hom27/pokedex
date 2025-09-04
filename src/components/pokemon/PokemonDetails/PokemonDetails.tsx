@@ -74,7 +74,7 @@ export default function PokemonDetails({ pokemon }: PokemonDetailProps) {
         <Button
           handleClick={handlePlay}
           className={styles.attackButton}
-          aria-label={`${pokemon.name}'s cry`}
+          ariaLabel={`${pokemon.name}'s cry`}
           text={POKEMON_ATTACK}
         />
       </section>
